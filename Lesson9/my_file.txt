@@ -1,0 +1,4 @@
+world
+word
+quiet
+tired
