@@ -1,0 +1,7 @@
+Parent1 = type('Parent1', (object, ), dict(a='1'))
+Parent2 = type('Parent2', (object, ), dict(b='2'))
+Child = type('Child', (Parent1, Parent2), dict(c='3'))
+print(Parent1.__dict__)
+print(Parent2.__dict__)
+print(Child.__dict__)
+print(Child.a, Child.b, Child.c, sep='\n')
