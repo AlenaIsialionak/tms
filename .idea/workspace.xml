@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="efe8dd2b-ad02-4db2-bd87-bca07f1e0b35" name="Changes" comment="homework2.4">
-      <change afterPath="$PROJECT_DIR$/Lesson 9/homework 9.1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson 9/homework 9.2 (version2).py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson 9/homework 9.2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson 9/homework 9.3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson8/date.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson8/homework 8.4.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson8/homework 8.4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson8/homework 8.5.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson8/homework 8.5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson10/homework10.2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson10/homework10.2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684675707336</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="homework2.4">
+      <created>1687798415056</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1687798415056</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
