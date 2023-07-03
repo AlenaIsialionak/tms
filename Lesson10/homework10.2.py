@@ -53,7 +53,7 @@ print(f'year: {person1.birth}')
 print(person1.birth)
 print('*************')
 print(person1.__dict__)
-person2 = Person('Adfg', 101
+person2 = Person('Adfg', 101)
 
 print(person1 == person2)
 print(person1 != person2)
