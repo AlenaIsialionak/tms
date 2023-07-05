@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="efe8dd2b-ad02-4db2-bd87-bca07f1e0b35" name="Changes" comment="homework2.4">
-      <change afterPath="$PROJECT_DIR$/Lesson12/homework12.1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson12/homework12.2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson13/homework.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson10/homework10.2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson10/homework10.2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,16 +231,5 @@
     <MESSAGE value="homework2.1" />
     <MESSAGE value="homework2.4" />
     <option name="LAST_COMMIT_MESSAGE" value="homework2.4" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
