@@ -4,7 +4,7 @@ with sqlite3.connect('homework.db') as sq:
     cur = sq.cursor()
 
     cur.execute("""CREATE TABLE IF NOT EXISTS students(
-                id PRIMARY KEY,
+                id PRIMARY KEY AUTOINCREMENT,
                 name VARCHAR(20) NOT NULL,
                 age INTEGER NOT NULL);
                 """)
@@ -15,7 +15,7 @@ with sqlite3.connect('homework.db') as sq:
     ('Kate', 29);""")
 
     cur.execute("""CREATE TABLE IF NOT EXISTS audience(
-                id PRIMARY KEY,
+                id PRIMARY KEY AUTOINCREMENT,
                 number INTEGER NOT NULL,
                 exam REFERENCES students (name)
                 ON DELETE CASCADE ON UPDATE NO ACTION);
