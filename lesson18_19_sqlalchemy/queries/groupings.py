@@ -1,6 +1,5 @@
 from sqlalchemy import desc, func, select
 from lesson18_19_sqlalchemy.models import Like, Post, User
-
 # ======================== GROUP BY =================================== #
 
 # 1. Get likes statistics by posts

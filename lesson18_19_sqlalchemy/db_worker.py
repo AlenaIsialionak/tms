@@ -1,5 +1,4 @@
 import sqlalchemy.exc
-
 from sqlalchemy import text, desc, func, select
 from sqlalchemy.ext.asyncio import create_async_engine
 from sqlalchemy.ext.asyncio import AsyncSession
