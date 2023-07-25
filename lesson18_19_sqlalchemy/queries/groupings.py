@@ -3,7 +3,6 @@ from lesson18_19_sqlalchemy.models import Like, Post, User
 
 # ======================== GROUP BY =================================== #
 
-
 # 1. Get likes statistics by posts
 def get_likes_count_by_posts():
     """

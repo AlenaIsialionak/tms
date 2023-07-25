@@ -7,7 +7,6 @@ import asyncio
 from sqlalchemy import select, delete
 from asyncpg.exceptions import UniqueViolationError
 from sqlalchemy.orm import joinedload
-
 from lesson18_19_sqlalchemy import config
 import datetime
 from lesson18_19_sqlalchemy.models import User, Post, Comment, Like

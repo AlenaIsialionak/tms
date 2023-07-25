@@ -19,6 +19,7 @@ async def get_update_comments_title_and_check_updates(db_worker: DatabaseWorker,
     print(50 *'*')
     print(real_post_comment)
     print(50 * '*')
+
     await database_worker.check_db()
     time_now = datetime.now()
     current_time = 'Update time:'+time_now.strftime("%H:%M:%S")
