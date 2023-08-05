@@ -43,18 +43,18 @@ def check_linked_list_methods(my_list):
     print(my_list)
 
     assert [i for i in my_list] == ["ADD_2", "ADD_1", 1, 2, 3, 4, 5]
-
+    #
     # ADD
-    """
-    Uncomment the lines bellow after the add() method will be implemented 
-    """
-    # my_list.add("ADD_3")
-    # print(my_list, "Size: {}".format(len(my_list)))
-    # my_list.add("ADD_4")
-    # print(my_list, "Size: {}".format(len(my_list)))
-    # my_list.add("ADD_5")
-    # print(my_list, "Size: {}".format(len(my_list)))
-
+    # """
+    # Uncomment the lines bellow after the add() method will be implemented
+    # """
+    my_list.add("ADD_3")
+    print(my_list, "Size: {}".format(len(my_list)))
+    my_list.add("ADD_4")
+    print(my_list, "Size: {}".format(len(my_list)))
+    my_list.add("ADD_5")
+    print(my_list, "Size: {}".format(len(my_list)))
+    #
     # ASSERTIONS
     assert len(my_list) == 10
     assert [i for i in my_list] == [
@@ -69,14 +69,15 @@ def check_linked_list_methods(my_list):
         4,
         5,
     ]
+    print(f'index of the element "ADD_5": {my_list.index("ADD_5")}')
     assert my_list.index("ADD_5") == 0
     assert my_list.index(5) == len(my_list) - 1
-
+    #
     # INSERT
 
     # Insert to TAIL
     my_list.insert("INSERT_1", 11)
-    # print(my_list, "Size: {}".format(len(my_list)))
+    print(my_list, "Size: {}".format(len(my_list)))
     assert [i for i in my_list] == [
         "ADD_5",
         "ADD_4",
@@ -283,7 +284,7 @@ def check_linked_list_methods(my_list):
 
     # POP again!
     res = my_list.pop(1)
-    # print(my_list, "Size: {}".format(len(my_list)))
+    print(my_list, "Size: {}".format(len(my_list)))
     assert res == "ADD_5"
     assert my_list.head.item == "NEW_ADD"
     assert my_list.tail.item == "NEW_APPEND"
@@ -304,7 +305,7 @@ def check_linked_list_methods(my_list):
 
     # INSERT by NEGATIVE index!
     my_list.insert("NEGATIVE", -1)
-    # print(my_list, "Size: {}".format(len(my_list)))
+    print(my_list, "Size: {}".format(len(my_list)))
     assert my_list.head.item == "NEGATIVE"
     assert my_list.tail.item == "NEW_APPEND"
     assert len(my_list) == 10

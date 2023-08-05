@@ -1,9 +1,13 @@
 class Node:
     __slots__ = ("item", "next_item", "prev_item")
-
-    def __init__(self, item):
+    # def __init__(self, item):
+    #     self.item = item
+    #     self.next_item = None
+    #     self.prev_item = None
+    
+    def __init__(self, item, next_item=None):
         self.item = item
-        self.next_item = None
+        self.next_item = next_item
         self.prev_item = None
 
     def get_item(self):
@@ -28,15 +32,18 @@ class LinkedList:
         self._size = 0
 
     def __iter__(self):
-        """
-        Please implement it by yourself :)
-        """
+        return Iter(self.head)
 
     def __str__(self):
-        """
-        Please implement it by yourself after __iter__:)
-        """
-        # return f"{self._name}({tuple(i for i in self)})"
+        if self.head is None:
+            return 'List is empty'
+
+        elem = self.head
+        my_list = []
+        while elem:
+            my_list.append(elem.item)
+            elem = elem.get_next()
+        return f'Linked List: {my_list}'
 
     def __contains__(self, item):
         for element in self:
@@ -63,28 +70,31 @@ class LinkedList:
             raise ValueError
 
     def add(self, item):
-        """
-        Item is added to the Head of the List
-
-        Please implement it by yourself :)
-        NOTE: adding to the HEAD of LinkedList
-        should have complexity O(1)
-        """
+        node = Node(item, self.head)
+        self.head = node
+        self._size += 1
 
     def append(self, item):
         """
         Item is added to the Tail of the List
         """
-        node = Node(item)
-
-        if self._size == 0:
-            node.set_next(self.head)
-            self.head = self.tail = node
-        else:
-            self.tail.set_next(node)
-            self.tail = node
-
+        if self.head is None:
+            self.head = Node(item, None)
+            return
+        elem = self.head
+        while elem.get_next():
+            elem = self.tail = elem.get_next()
+        elem.next_item = self.tail = Node(item, None)
         self._size += 1
+        # node = Node(item)
+        # if self._size == 0:
+        #     node.set_next(self.head)
+        #     self.head = self.tail = node
+        # else:
+        #     self.tail.set_next(node)
+        #     self.tail = node
+        #
+        # self._size += 1
 
     def insert(self, item, position):
         if self._size == 0 or position <= 0:
@@ -123,7 +133,7 @@ class LinkedList:
 
     def pop(self, position=None):
         if self._size == 0:
-            raise IndexError(f"pop from empty {self._name}")
+            raise IndexError(f"pop from empty list {self._name}")
 
         if position is not None and (position < 0 or position >= self._size):
             raise IndexError(f"pop index {position} is out of range")
@@ -163,3 +173,37 @@ class LinkedList:
         else:
             self.__update_prev_and_next(previous, current)
             self._size -= 1
+
+    def print(self):
+        if self.head is None:
+            print('List is empty')
+            return
+
+        elem = self.head
+        my_list = []
+        while elem:
+            my_list.append(elem.item)
+            elem = elem.get_next()
+        return my_list
+
+
+class Iter:
+    def __init__(self, elem):
+        self.elem = elem
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.elem:
+            result = self.elem.item
+            self.elem = self.elem.next_item
+            return result
+        else:
+            raise StopIteration
+
+
+
+
+
+

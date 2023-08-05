@@ -27,23 +27,23 @@ pyright = "*"
 
 
 
-[tool.poetry.group.test]
-optional = true
-
-
-[tool.poetry.group.test.dependencies]
-pytest = "*"
-pytest-asyncio = "*"
-pytest-cov = "*"
-pytest-mock = "*"
-
-
-[tool.poetry.group.lint]
-optional = true
-
-
-[tool.poetry.group.lint.dependencies]
-pyright = "*"
+#[tool.poetry.group.test]
+#optional = true
+#
+#
+#[tool.poetry.group.test.dependencies]
+#pytest = "*"
+#pytest-asyncio = "*"
+#pytest-cov = "*"
+#pytest-mock = "*"
+#
+#
+#[tool.poetry.group.lint]
+#optional = true
+#
+#
+#[tool.poetry.group.lint.dependencies]
+#pyright = "*"
 
 
 [tool.isort]
