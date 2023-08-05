@@ -174,18 +174,6 @@ class LinkedList:
             self.__update_prev_and_next(previous, current)
             self._size -= 1
 
-    def print(self):
-        if self.head is None:
-            print('List is empty')
-            return
-
-        elem = self.head
-        my_list = []
-        while elem:
-            my_list.append(elem.item)
-            elem = elem.get_next()
-        return my_list
-
 
 class Iter:
     def __init__(self, elem):
