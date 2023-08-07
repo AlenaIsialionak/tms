@@ -32,16 +32,28 @@ class LinkedList:
         self._size = 0
 
     def __iter__(self):
+        # Additional class for Iterator is not needed
+        # Just move the code from __str__ method to here
+        # (with appropriate updates which I specified, of course)
         return Iter(self.head)
 
     def __str__(self):
+        # The logic you have here
+        # should be implemented within
+        # the __iter__ method, __str__
+        # method should be simplified,
+        # it should just call the __iter__
+        # and return str result
         if self.head is None:
             return 'List is empty'
 
         elem = self.head
-        my_list = []
+        my_list = []  # don't need list here
         while elem:
+            # instead of appending element.item
+            # to the new list - just 'yield' it :)
             my_list.append(elem.item)
+
             elem = elem.get_next()
         return f'Linked List: {my_list}'
 
@@ -72,6 +84,11 @@ class LinkedList:
     def add(self, item):
         node = Node(item, self.head)
         self.head = node
+
+        # here You forgot to add some check,
+        # therefore my version of 'append'
+        # doesn't work as expected
+
         self._size += 1
 
     def append(self, item):
@@ -83,6 +100,13 @@ class LinkedList:
             return
         elem = self.head
         while elem.get_next():
+            # you iterate over the List elements here, this means that
+            # for appending new element to the Tail of List you need
+            # to go through the whole List starting from the Head
+            # to the Tail. And this means that Complexity of this algorithm is
+            # O(N) (where N - count of List elements), but expected Complexity
+            # is O(1) (constant time, doesn't depend on count of Elements)
+            # as it was implemented in my example of 'append'
             elem = self.tail = elem.get_next()
         elem.next_item = self.tail = Node(item, None)
         self._size += 1
