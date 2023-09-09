@@ -5,10 +5,10 @@ data_base1 = [{'id': 1, 'name': 'Kate', 'age': 23, 'job_id': 1},
              {'id': 5, 'name': 'Mark', 'age': 33, 'job_id': 2},
              {'id': 6, 'name': 'Helena', 'age': 29}
              ]
-data_job1 = [{'id_': 1, 'job': 'doctor'},
-            {'id_': 2, 'job': 'engineer'},
-            {'id_': 3, 'job': 'programmer'},
-            {'id_': 4, 'job': 'designer'}
+data_job1 = [{'id': 1, 'job': 'doctor'},
+            {'id': 2, 'job': 'engineer'},
+            {'id': 3, 'job': 'programmer'},
+            {'id': 4, 'job': 'designer'}
             ]
 
 
@@ -16,8 +16,8 @@ def inner_join(data_base: dict, data_job: dict):
     new_date = []
     for i in data_base:
         for j in data_job:
-            if i.get('job_id') == j.get('id_'):
-                data_join = dict(list(i.items())+list(j.items()))
+            if i.get('job_id') == j.get('id'):
+                data_join = list(i.items())+list(j.items())
                 new_date.append(data_join)
 
     return new_date
@@ -34,14 +34,13 @@ def left_outer_join(data_base: dict, data_job: dict):
     new_date = []
     for i in data_base:
         for j in data_job:
-            if i.get('job_id') == j.get('id_'):
-                data_join = dict(list(i.items())+list(j.items()))
+            if i.get('job_id') == j.get('id'):
+                data_join = list(i.items())+list(j.items())
                 new_date.append(data_join)
                 break
-
             count += 1
             if count == len(data_job):
-                data_join = dict(list(i.items()) + [('job_id', None), ('id_', None), ('job', None)])
+                data_join = list(i.items()) + [('job_id', None), ('id', None), ('job', None)]
                 new_date.append(data_join)
                 count = 0
 
@@ -60,19 +59,19 @@ def right_outer_join(data_base: dict, data_job: dict):
     new_date = []
     for j in data_job:
         for i in data_base:
-            if i.get('job_id') == j.get('id_'):
-                data_join = dict(list(i.items())+list(j.items()))
+            if i.get('job_id') == j.get('id'):
+                data_join = list(i.items())+list(j.items())
                 new_date.append(data_join)
                 break
-
             count += 1
             if count == len(data_base):
-                data_join = dict([('id', None), ('name', None), ('age', 'None'), ('job_id', None)] + list(j.items()))
+                data_join = [('id', None), ('name', None), ('age', 'None'), ('job_id', None)] + list(j.items())
                 new_date.append(data_join)
                 count = 0
                 break
 
     return new_date
+
 
 for i in right_outer_join(data_base1, data_job1):
     print(i)
