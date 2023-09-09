@@ -75,3 +75,4 @@ def right_outer_join(data_base: dict, data_job: dict):
 
 for i in right_outer_join(data_base1, data_job1):
     print(i)
+
