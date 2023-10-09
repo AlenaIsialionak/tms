@@ -199,7 +199,7 @@ class LinkedList:
         if current2:
             return False
         else:
-            return self.__str__() == linked_list2.__str__()
+            return True
 
 
 
