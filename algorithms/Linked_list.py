@@ -178,15 +178,28 @@ class LinkedList:
         return linked_list
 
 
+    # def __eq__(self, linked_list2):
+    #     if self._size != len(linked_list2):
+    #         return False
+    #     if not isinstance(linked_list2, LinkedList):
+    #         raise TypeError
+    #     else:
+    #         return self.__str__() == linked_list2.__str__()
+
     def __eq__(self, linked_list2):
-        if self._size != len(linked_list2):
-            return False
+        if self.head is None and linked_list2.head is None:
+            return True
         if not isinstance(linked_list2, LinkedList):
             raise TypeError
+        current1, current2 = self.head, linked_list2.head
+        while current1:
+            if current2 is None or current1.item != current2.item:
+                return False
+            current1, current2 = current1.next, current2.next
+        if current2:
+            return False
         else:
             return self.__str__() == linked_list2.__str__()
-
-
 
 
 
