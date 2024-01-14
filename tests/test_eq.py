@@ -16,6 +16,7 @@ from algorithms.Linked_list import LinkedList
 )
 
 
+
 def test_eq_linked_list(list1:list, list2:list, expected:bool):
 
     assert (LinkedList.from_iterable(list1) == LinkedList.from_iterable(list2)) is expected
