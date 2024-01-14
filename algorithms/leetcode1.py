@@ -56,8 +56,10 @@ class Linked_list:
             current = next_elem
         l2 = self.print(prev)
         return l1 == l2
+
+
     def size_list(self):
-        current= self.head
+        current = self.head
         size = 0
         while current:
             size += 1
@@ -191,7 +193,7 @@ class Linked_list:
                 return real.val
         return False
 
-        return False
+
     def middle_linked_list(self):
         if self.head is None:
             return
@@ -201,6 +203,8 @@ class Linked_list:
             real = real.next
 
         return real.val
+
+
 
 
 
